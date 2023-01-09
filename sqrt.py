@@ -7,12 +7,17 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        for i in range(0, x+1):
-            if i*i == x:
+        squared_i = 0
+        i = 0
+        while squared_i <= x:
+            squared_i = i * i
+            if squared_i == x:
                 return i
-            elif i*i > x:
+            elif squared_i > x:
                 return i-1
+            i += 1
 
 
 obj = Solution()
 print(obj.mySqrt(2147395599))
+print(obj.mySqrt(4))
