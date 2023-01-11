@@ -7,3 +7,9 @@ class Solution(object):
         :type numRows: int
         :rtype: List[List[int]]
         """
+        res = []
+        for i in range(numRows):
+            if i == 0:
+                res.append([1])
+            if i == 1:
+                res.append([1, 1])
