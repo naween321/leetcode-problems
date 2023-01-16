@@ -11,5 +11,21 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        pass
+        if len(s) != len(t):
+            return False
+        mapping = {}
+        for i, v in enumerate(s):
+            if v not in mapping or t[i] not in mapping:
+                mapping.update({v: t[i]})
+                if v != t[i]:
+                    mapping.update({t[i]: v})
+            else:
+                if mapping[v] != t[i]:
+                    return False
+                if mapping[t[i]] != v:
+                    return False
+        return True
 
+
+obj = Solution()
+print(obj.isIsomorphic("badc", "baba"))
