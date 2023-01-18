@@ -28,4 +28,4 @@ class Solution(object):
 
 
 obj = Solution()
-print(obj.isIsomorphic("badc", "baba"))
+print(obj.isIsomorphic("badc", "babababa"))
