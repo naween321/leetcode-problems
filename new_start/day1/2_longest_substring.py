@@ -12,6 +12,7 @@ class Solution:
                 max_length = max(max_length, i - start + 1)
             map[s[i]] = i
         return max_length
- 
+
+
 obj = Solution()
 obj.lengthofLongestSubstring('abcdbcd')
